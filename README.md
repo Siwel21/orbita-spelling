@@ -18,3 +18,9 @@ El audio se activa al tocar un botón.
 
 En Settings → Pages, elegir Deploy from a branch, rama main y carpeta / (root).
 El archivo index.html contiene todo lo necesario para jugar.
+
+## Micrófono
+
+Las letras se fijan solo al confirmarse y se añaden al siguiente espacio. Los resultados provisionales no cambian las casillas. La app reutiliza el reconocedor y recuerda la preferencia de activación, pero el permiso lo controla el navegador: elegir Permitir para este sitio si vuelve a preguntar.
+
+El archivo audio-library.txt conserva la biblioteca de audio de la versión anterior. boot.js lee solo su JSON de audio sin ejecutar el HTML archivado.

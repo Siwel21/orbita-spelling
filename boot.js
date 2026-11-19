@@ -1,0 +1,4 @@
+// Load the existing embedded audio as data only; never execute the archived page.
+(async()=>{try{const response=await fetch('./audio-library.txt',{cache:'force-cache'});if(!response.ok)throw Error('audio');const source=await response.text(),marker='const VOICE=',start=source.indexOf(marker);if(start<0)throw Error('audio marker');const from=start+marker.length,end=source.indexOf(';\n',from);if(end<0)throw Error('audio format');const clips=JSON.parse(source.slice(from,end));if(!clips.eat||!clips['letter:c']||Object.keys(clips).length!==225)throw Error('audio library');window.VOICE=clips;const script=document.createElement('script');script.src='./app.js?v=locked-letters-2';script.onerror=()=>showError();script.onload=()=>{document.getElementById('progressButton').disabled=false};document.body.appendChild(script)}catch{showError()}
+function showError(){document.getElementById('app').textContent='No se pudo cargar el juego. Revisa internet y recarga la página.'}
+})();
