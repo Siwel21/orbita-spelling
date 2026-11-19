@@ -6,7 +6,8 @@ Juego de práctica oral de Spelling Bee con temática espacial.
 - Audio integrado: letras en inglés y luego la palabra completa.
 - Modo de escucha, misiones y simulacro acompañado.
 - Avance guardado en el navegador de cada dispositivo.
-- Sin cuentas del niño, micrófono ni envío de resultados.
+- Deletreo por micrófono en las misiones de práctica, con validación de letras.
+- Sin cuentas del niño ni grabaciones guardadas por la app. El navegador puede usar un servicio externo para reconocer la voz.
 
 ## Abrir en una tablet
 
